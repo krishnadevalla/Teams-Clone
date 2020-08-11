@@ -1,0 +1,19 @@
+﻿<div class="app__header">
+    <div class="app__header__left">
+        <div class="app__header__left__menu">
+            <span class="oi oi-menu"></span>
+        </div>
+        <div class="app__header__left__logo">
+            Teams App
+        </div>
+    </div>
+    <div class="app__header__searchBox">
+        <span class="oi oi-magnifying-glass"></span>
+        <input type="text" value="@searchText" placeholder="Search" />
+    </div>
+    <div class="app__header__userIcon" @onclick="changeOptions">
+        <div class="app__header__userIcon_tap">TAP</div>
+        <span class="oi oi-person"></span>
+    </div>
+</div>
+    <OptionsList User="@User" Display="@showOptions" />

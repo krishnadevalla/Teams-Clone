@@ -1,0 +1,94 @@
+﻿.app__header {
+    display: flex;
+    width: 100%;
+    background: #464775;
+    position: absolute;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.app__header__left {
+    display: inline-flex;
+    align-items: center;
+    width: 10%;
+    color: white;
+}
+
+.app__header__left__menu {
+    padding: 18px;
+    align-content: start;
+}
+
+    .app__header__left__menu:hover {
+        background: #a6a7dc;
+        cursor: pointer;
+    }
+
+.app__header__left__logo {
+    color: white;
+    font-weight: bolder;
+    font-size: 15px;
+    align-items: flex-end;
+}
+
+.app__header__searchBox {
+    color: #484644;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    background: #292828;
+    width: 60%;
+}
+
+    .app__header__searchBox > input {
+        border-style: none;
+        background: none;
+        height: 30px;
+        color: white;
+    }
+
+        .app__header__searchBox > input:focus {
+            border: none;
+            outline: none;
+        }
+
+    .app__header__searchBox > span {
+        padding: 0 0 0 8px
+    }
+
+.app__header__userIcon {
+    border-radius: 100px;
+    background-color: #292828;
+    cursor: pointer;
+    padding: 10px 13px 10px 13px;
+}
+
+    .app__header__userIcon > div {
+        position: absolute;
+        border: solid;
+        border-radius: 10px;
+        border-width: 1px;
+        padding: 2px;
+        background-color: white;
+        color: black;
+        font-size: 7px;
+        top: 0px;
+    }
+
+    .app__header__userIcon > span {
+        position: relative;
+        color: white;
+        font-size: 20px;
+    }
+
+.app__header__userIcon__options {
+    position: absolute;
+    background-color:white;
+    right:0;
+    top: 51px;
+    width:20%;
+    padding:10px;
+}
