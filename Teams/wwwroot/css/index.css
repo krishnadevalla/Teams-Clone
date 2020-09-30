@@ -1,0 +1,12 @@
+﻿.index {
+    display: grid;
+    grid-template-areas: 'head' 'body';
+}
+
+    .index > .app__header {
+        grid-area: head
+    }
+
+    .index > .app__body {
+        grid-area: body
+    }

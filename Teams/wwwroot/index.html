@@ -8,12 +8,14 @@
     <base href="/" />
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link href="css/app.css" rel="stylesheet" />
+    <link href="css/appbg.css" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet" />
     <link href="css/appHeader.css" rel="stylesheet" />
+    <link href="css/appBody.css" rel="stylesheet" />
     <link href="manifest.json" rel="manifest" />
-    <link rel="apple-touch-icon" sizes="512x512" href="icon-512.png" />
 </head>
 
-<body>
+<body class="appbg">
     <app>Loading...</app>
 
     <div id="blazor-error-ui">
@@ -22,7 +24,7 @@
         <a class="dismiss">🗙</a>
     </div>
     <script src="_framework/blazor.webassembly.js"></script>
+    <script src="_content/Fluxor.Blazor.Web/scripts/index.js"></script>
     <script>navigator.serviceWorker.register('service-worker.js');</script>
 </body>
-
 </html>

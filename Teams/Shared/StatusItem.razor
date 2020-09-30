@@ -1,0 +1,5 @@
+﻿@inherits Fluxor.Blazor.Web.Components.FluxorComponent
+<div class="app__header__userIcon__options__statusItem" @onclick="SaveStatus">
+    <div class="app__header__userIcon__options__statusItem__icon" style="background-color:@Status.Color" />
+    <div class="app__header__userIcon__options__statusItem__string">@Status.StatusString</div>
+</div>

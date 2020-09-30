@@ -1,14 +1,14 @@
 ﻿using Teams.Models;
 
-namespace Teams.Store
+namespace Teams.Store.User
 {
     public class UserState
     {
-        public UserState(User user)
+        public UserState(AppUser user)
         {
             User = user;
         }
 
-        public User User { get; }
+        public AppUser User { get; }
     }
 }

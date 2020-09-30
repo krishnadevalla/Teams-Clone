@@ -3,23 +3,25 @@
     width: 100%;
     background: #464775;
     position: absolute;
-    height: 50px;
+    height: 40px;
     align-items: center;
     justify-content: space-between;
-    padding-left: 10px;
+    /*padding-left: 10px;*/
     padding-right: 10px;
 }
 
 .app__header__left {
     display: inline-flex;
     align-items: center;
-    width: 10%;
+    width: 20%;
     color: white;
+    left: 0
 }
 
 .app__header__left__menu {
-    padding: 18px;
-    align-content: start;
+    padding: 20px;
+    align-content: center;
+    width: 20%;
 }
 
     .app__header__left__menu:hover {
@@ -29,9 +31,12 @@
 
 .app__header__left__logo {
     color: white;
-    font-weight: bolder;
+    font-weight: lighter;
+    font-stretch: extra-expanded;
     font-size: 15px;
+    padding-left: 20px;
     align-items: flex-end;
+    -webkit-font-smoothing: antialiased;
 }
 
 .app__header__searchBox {
@@ -40,13 +45,15 @@
     border-width: 1px;
     border-color: black;
     background: #292828;
-    width: 60%;
+    display: flex;
+    width: 70%;
+    font-size: 10px;
 }
 
     .app__header__searchBox > input {
         border-style: none;
         background: none;
-        height: 30px;
+        width: 100%;
         color: white;
     }
 
@@ -56,39 +63,98 @@
         }
 
     .app__header__searchBox > span {
-        padding: 0 0 0 8px
+        padding: 8px;
     }
 
 .app__header__userIcon {
-    border-radius: 100px;
-    background-color: #292828;
     cursor: pointer;
-    padding: 10px 13px 10px 13px;
 }
 
-    .app__header__userIcon > div {
-        position: absolute;
-        border: solid;
-        border-radius: 10px;
-        border-width: 1px;
-        padding: 2px;
-        background-color: white;
-        color: black;
-        font-size: 7px;
-        top: 0px;
-    }
+.app__header__userIcon__tap {
+    position: relative;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    font-size: 8px;
+    padding-bottom: 1.5px;
+    padding-left: 1px;
+    width: 15px;
+    top: 5px;
+    font-stretch: extra-condensed;
+    height: 9px;
+}
 
-    .app__header__userIcon > span {
-        position: relative;
-        color: white;
-        font-size: 20px;
-    }
+.app__header__userIcon__status {
+    position: relative;
+    border-radius: 100px;
+    padding: 3px;
+    width: 3px;
+    left: 23px;
+    top: -5px;
+    border-width: 2px;
+    border-color: transparent;
+}
 
 .app__header__userIcon__options {
     position: absolute;
-    background-color:white;
-    right:0;
-    top: 51px;
-    width:20%;
-    padding:10px;
+    color: #a0a0a0;
+    font-stretch: expanded;
+    font-size: large;
+    right: 0%;
+    top: 40px;
+    width: 300px;
+    padding: 10px;
+    box-shadow: 0 0.2rem 1.6rem 0 rgba(0,0,0,.5);
+    border-radius: 0.3rem;
+    border: 0;
+    z-index: 11110;
+}
+
+.app__header__userIcon__options__userInfo {
+    display: grid;
+    grid-template-areas: 'left right right right right right';
+}
+
+.app__header__userIcon__options__image {
+    grid-area: left;
+    padding: 10px;
+}
+
+.app__header__userIcon__options__nameemail {
+    grid-area: right;
+    padding-top: 20px;
+}
+
+    .app__header__userIcon__options__nameemail > a {
+        color: inherit;
+        font-size: 10px;
+    }
+
+.app__header__userIcon__options__name {
+    font-size: 15px;
+    font-weight: bolder;
+    color: whitesmoke;
+}
+
+.app__header__userIcon__options__email {
+    font-size: 10px;
+    font-weight: lighter;
+    color: wheat;
+}
+
+.app__header__userIcon__options__statusItem {
+    display: flex;
+    cursor: pointer;
+}
+
+.app__header__userIcon__options__statusItem__icon {
+    border-radius: 100px;
+    padding: 5px;
+    height: 10px;
+    width: 10px;
+    margin: 5px;
+}
+
+.app__header__userIcon__options__statusItem__string {
+    padding-left: 10px
 }

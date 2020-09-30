@@ -1,4 +1,5 @@
-﻿<div class="app__header">
+﻿@inherits Fluxor.Blazor.Web.Components.FluxorComponent
+<div class="app__header">
     <div class="app__header__left">
         <div class="app__header__left__menu">
             <span class="oi oi-menu"></span>
@@ -11,9 +12,13 @@
         <span class="oi oi-magnifying-glass"></span>
         <input type="text" value="@searchText" placeholder="Search" />
     </div>
-    <div class="app__header__userIcon" @onclick="changeOptions">
-        <div class="app__header__userIcon_tap">TAP</div>
-        <span class="oi oi-person"></span>
+    <div class="app__header__userIcon" @onclick="()=> showOptions = !showOptions">
+        <div class="app__header__userIcon__tap">TAP</div>
+        <img height="28" width="28" style="object-fit:cover" src="@(User.Avatar)" alt="@User.Avatar" />
+        <div class="app__header__userIcon__status" style="background-color:@User.Status.Color"></div>
     </div>
+    @if (showOptions)
+    {
+        <OptionsList />
+    }
 </div>
-    <OptionsList User="@User" Display="@showOptions" />

@@ -1,0 +1,62 @@
+﻿.app__body {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    top: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.app__menu {
+    width: 4%;
+    height: calc(100vh - 38px);
+}
+
+.app__menu__item {
+    padding: 7px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+}
+
+.app__menu :hover {
+    background-color: rgba(60,61,93,0.9);
+}
+
+.app__menu :visited {
+    background-color: green;
+}
+
+.app__menu__icon {
+    color: whitesmoke;
+    font-size: 20px;
+}
+
+.app__menu__text {
+    color: lightgray;
+    white-space: nowrap;
+    font-size: 10px;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    text-decoration: none;
+    opacity: .63;
+}
+
+.app__menu__bottomitem {
+    bottom: 0px;
+    position: absolute;
+    padding-left: 13px;
+    padding-right: 20px;
+}
+
+.app__chatChannel {
+    width: 20%;
+}
+
+.app__main {
+    width: 75%;
+}

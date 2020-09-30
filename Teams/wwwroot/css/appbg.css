@@ -1,0 +1,26 @@
+﻿.appbg {
+    background-color: #201f1f;
+}
+
+hr.appbg {
+    color: #3B3A3A;
+    border-color: #3B3A3A;
+}
+
+.appbg1 {
+    background-color: #2D2C2C;
+}
+
+hr.appbg1 {
+    color: #201f1f;
+    border-color: #201f1f;
+}
+
+.appbg2 {
+    background-color: #3B3A3A;
+}
+
+hr.appbg2 {
+    color: #2D2C2C;
+    border-color: #201f1f;
+}

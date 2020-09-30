@@ -1,8 +1,6 @@
-﻿using Fluxor.Blazor.Web.Components;
-
-namespace Teams.Shared
+﻿namespace Teams.Shared
 {
-    public partial class AppBody : FluxorComponent
+    public partial class AppBody
     {
     }
 }

@@ -1,14 +1,68 @@
-﻿@if (Display && User != null)
-{
-    <div class="app__header__userIcon__options">
-    <img height="100px" width="100px" src="@User.Avatar" />
+﻿@inherits Fluxor.Blazor.Web.Components.FluxorComponent
+<div class="app__header__userIcon__options appbg1">
+    <div class="app__header__userIcon__options__userInfo">
+        <div class="app__header__userIcon__options__image">
+            <img height="100" width="100" style="object-fit:cover" src="@User.Avatar" />
+        </div>
+        <div class="app__header__userIcon__options__nameemail">
+            <div class="app__header__userIcon__options__name">
+                @User.FullName
+            </div>
+            <div class="app__header__userIcon__options__email">
+                @User.Email
+            </div>
+            <div style="cursor:pointer" @onclick="()=>isChangingPicture = !isChangingPicture">
+                @if (!isChangingPicture)
+                {
+                    <div>Change picture</div>
+                }
+                else
+                {
+                    <div>Close</div>
+                }
+            </div>
+            @if (isChangingPicture)
+            {
+                <div style="width:80%;  font-size:12px ;border:2px solid gray;justify-content: space-between;display:flex;height:25px; padding:1px">
+                    <input style="width:70%;border:0px; background-color:transparent" placeholder="Paste the url" type="text" @bind-value="@picUrl" />
+                    <div style="border-radius:2px;padding:0 2px;cursor:pointer;background-color:chartreuse" @onclick="UpdatePicture">Save</div>
+                </div>
+            }
+        </div>
+    </div>
     <div>
 
+        @if (canEditStatus)
+        {
+            <input @bind-value="User.StatusMessage" @onblur="UpdateStatus" />
+        }
+        else
+        {
+            <p>@User.StatusMessage</p>
+        }
     </div>
-    <li>
-        <ul>Setting</ul>
-        <ul>Status</ul>
-        <ul>Set Status Message</ul>
-    </li>
+    <hr class="dropdown-divider appbg" />
+    <div style="display:flex">
+        <div style="align-items:flex-start">
+            @User.Status.StatusString
         </div>
-}
+        <div style="align-items:flex-end; cursor:pointer; padding-left:10px" @onclick="() => changingStatus = !changingStatus">
+            @if (!changingStatus)
+            {
+                <span class="oi oi-chevron-right"></span>
+            }
+            else
+            {
+                <span class="oi oi-chevron-bottom"></span>
+            }
+        </div>
+    </div>
+    @if (changingStatus)
+    {
+        <StatusChange />
+    }
+    <div>
+        <div style="cursor:pointer" @onclick="() => canEditStatus = !canEditStatus"><span class="oi oi-chat"></span> Set Status Message</div>
+        <div style="cursor:pointer"><span class="oi oi-wrench"></span> Setting</div>
+    </div>
+</div>

@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+﻿using Fluxor;
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Net.Http;
-using Fluxor;
 using System.Reflection;
 
 namespace Teams
@@ -14,7 +14,7 @@ namespace Teams
             services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(HostEnvironment.BaseAddress) });
             services.AddFluxor(options =>
             {
-                options.ScanAssemblies(Assembly.GetExecutingAssembly());
+                options.ScanAssemblies(Assembly.GetAssembly(typeof(Teams.Store.User.UserState)));
                 options.UseReduxDevTools();
             });
         }

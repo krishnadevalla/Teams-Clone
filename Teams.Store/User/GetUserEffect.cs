@@ -4,7 +4,7 @@ using System.Net.Http.Json;
 using System.Threading.Tasks;
 using Teams.Models;
 
-namespace Teams.Store
+namespace Teams.Store.User
 {
     public class GetUserEffect : Effect<GetUserAction>
     {
@@ -17,7 +17,7 @@ namespace Teams.Store
 
         protected override async Task HandleAsync(GetUserAction action, IDispatcher dispatcher)
         {
-            var user = await _httpClient.GetFromJsonAsync<User>("sample-data/user.json");
+            var user = await _httpClient.GetFromJsonAsync<AppUser>("sample-data/user.json");
             dispatcher.Dispatch(new SaveUserAction(user));
         }
     }

@@ -1,12 +1,12 @@
 ﻿using Teams.Models;
 
-namespace Teams.Store
+namespace Teams.Store.User
 {
     public class SaveUserAction
     {
-        public User User;
+        public AppUser User;
 
-        public SaveUserAction(User user)
+        public SaveUserAction(AppUser user)
         {
             User = user;
         }

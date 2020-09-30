@@ -1,4 +1,4 @@
-﻿namespace Teams.Store
+﻿namespace Teams.Store.User
 {
     public class GetUserAction
     {

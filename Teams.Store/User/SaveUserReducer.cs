@@ -1,6 +1,6 @@
 ﻿using Fluxor;
 
-namespace Teams.Store
+namespace Teams.Store.User
 {
     public class SaveUserReducer : Reducer<UserState, SaveUserAction>
     {
